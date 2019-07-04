@@ -1,0 +1,3 @@
+2019-06-26 17:37:20.377[restartedMain]DEBUG com.gdxx.SearchHouseApplication-Running with Spring Boot v1.5.7.RELEASE, Spring v4.3.11.RELEASE
+2019-06-26 17:37:31.956[localhost-startStop-1]DEBUG com.gdxx.security.AuthFilter-Initializing filter 'authFilter'
+2019-06-26 17:37:31.956[localhost-startStop-1]DEBUG com.gdxx.security.AuthFilter-Filter 'authFilter' configured successfully

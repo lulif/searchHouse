@@ -1,0 +1,7 @@
+2019-06-24 15:31:36.801[org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]ERROR com.gdxx.service.impl.SearchServiceImpl-Retry remove times over 3 for house: 7Please check it!
+2019-06-24 15:31:40.908[org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]ERROR com.gdxx.service.impl.SearchServiceImpl-Retry remove times over 3 for house: 6Please check it!
+2019-06-24 15:31:44.377[org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]ERROR com.gdxx.service.impl.SearchServiceImpl-Retry remove times over 3 for house: 5Please check it!
+2019-06-24 15:31:49.358[org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]ERROR com.gdxx.service.impl.SearchServiceImpl-Retry remove times over 3 for house: 4Please check it!
+2019-06-24 15:31:52.884[org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]ERROR com.gdxx.service.impl.SearchServiceImpl-Retry remove times over 3 for house: 3Please check it!
+2019-06-24 15:31:56.577[org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]ERROR com.gdxx.service.impl.SearchServiceImpl-Retry remove times over 3 for house: 2Please check it!
+2019-06-24 15:32:00.991[org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1]ERROR com.gdxx.service.impl.SearchServiceImpl-Retry remove times over 3 for house: 1Please check it!
