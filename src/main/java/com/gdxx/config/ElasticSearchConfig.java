@@ -30,33 +30,33 @@ public class ElasticSearchConfig {
 	@Value("${elasticsearch.cluster.name}")
 	private String esName;
 
-//	@Bean
-//	public TransportClient client() throws UnknownHostException {
-//		// client.transport.sniff自动发现节点
-//		Settings settings = Settings.builder().put("cluster.name", this.esName).put("client.transport.sniff", true)
-//				.build();
-//
-//		TransportAddress master = new TransportAddress(InetAddress.getByName(esHost), masterEsPort);
-//		TransportAddress slave1 = new TransportAddress(InetAddress.getByName(esHost), slave1EsPort);
-//
-//		TransportClient client = new PreBuiltTransportClient(settings).addTransportAddress(master)
-//				.addTransportAddress(slave1);
-//
-//		return client;
-//	}
-
 	@Bean
 	public TransportClient client() throws UnknownHostException {
 		// client.transport.sniff自动发现节点
 		Settings settings = Settings.builder().put("cluster.name", this.esName).put("client.transport.sniff", true)
 				.build();
 
-		TransportAddress nginxNode = new TransportAddress(InetAddress.getByName(esHost), nginxEsPort);
+		TransportAddress master = new TransportAddress(InetAddress.getByName(esHost), masterEsPort);
+		TransportAddress slave1 = new TransportAddress(InetAddress.getByName(esHost), slave1EsPort);
 
-		TransportClient client = new PreBuiltTransportClient(settings).addTransportAddress(nginxNode);
+		TransportClient client = new PreBuiltTransportClient(settings).addTransportAddress(master)
+				.addTransportAddress(slave1);
 
 		return client;
 	}
+
+//	@Bean
+//	public TransportClient client() throws UnknownHostException {
+//		// client.transport.sniff自动发现节点
+//		Settings settings = Settings.builder().put("cluster.name", this.esName).put("client.transport.sniff", true)
+//				.build();
+//
+//		TransportAddress nginxNode = new TransportAddress(InetAddress.getByName(esHost), nginxEsPort);
+//
+//		TransportClient client = new PreBuiltTransportClient(settings).addTransportAddress(nginxNode);
+//
+//		return client;
+//	}
 
 
 }

@@ -25,9 +25,6 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter implements Application
     @Value("${aliyun.accessKeySecret}")
     private String aliyunAccessKeySecret;
 
-    @Value("${aliyun.oss.bucketName}")
-    private String ossBucketName;
-
     @Value("${aliyun.oss.endpoint}")
     private String ossEndpoint;
 

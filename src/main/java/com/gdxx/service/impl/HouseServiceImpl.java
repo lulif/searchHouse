@@ -526,12 +526,14 @@ public class HouseServiceImpl implements HouseService {
     @Override
     public ServiceMultiResult<HouseDTO> query(RentSearch rentSearch) {
         if (rentSearch.getKeywords() != null && !rentSearch.getKeywords().isEmpty()) {
+            //es搜索
             ServiceMultiResult<Long> serviceResult = searchService.query(rentSearch);
             if (serviceResult.getTotal() == 0) {
                 return new ServiceMultiResult<>(0, new ArrayList<>());
             }
             return new ServiceMultiResult<>(serviceResult.getTotal(), wrapperHouseResult(serviceResult.getResult()));
         }
+        //数据库搜索
         return simpleQuery(rentSearch);
     }
 

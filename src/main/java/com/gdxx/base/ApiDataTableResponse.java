@@ -13,6 +13,7 @@ public class ApiDataTableResponse extends ApiResponse {
 	private long recordsTotal;
 	private long recordsFiltered;
 
+
 	public ApiDataTableResponse(int code, String message, Object data) {
 		super(code, message, data);
 	}

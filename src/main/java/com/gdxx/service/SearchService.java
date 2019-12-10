@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface SearchService {
 
-    //索引(动词)目标房源：1.对已上架的房源更新操作要在ES上简历索引 2.对未上架的房源做上架操作要构建索引
+    //索引(动词)目标房源：1.对已上架的房源更新操作要在ES上建立索引 2.对未上架的房源做上架操作要构建索引
     // 先从mysql里查出目标数据再去ES里构建
     void index(Long houseId);
 

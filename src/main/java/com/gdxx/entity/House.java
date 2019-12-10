@@ -1,16 +1,11 @@
 package com.gdxx.entity;
 
-import java.util.Date;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
 import lombok.Getter;
 import lombok.Setter;
+
+import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "house")
@@ -71,4 +66,6 @@ public class House {
 
 	@Column(name = "distance_to_subway")
 	private int distanceToSubway;
+
+	private LocalDateTime testTime;
 }

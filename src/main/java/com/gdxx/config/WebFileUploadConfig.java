@@ -1,8 +1,6 @@
 package com.gdxx.config;
 
-import javax.servlet.MultipartConfigElement;
-import javax.servlet.Servlet;
-
+import com.google.gson.Gson;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -14,7 +12,8 @@ import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.DispatcherServlet;
 
-import com.google.gson.Gson;
+import javax.servlet.MultipartConfigElement;
+import javax.servlet.Servlet;
 
 /*
  * 上传文件配置
@@ -45,7 +44,7 @@ public class WebFileUploadConfig {
 	 * 注册解析器
 	 */
 	@Bean(name = DispatcherServlet.MULTIPART_RESOLVER_BEAN_NAME)
-	@ConditionalOnMissingBean(MultipartResolver.class) // 这个表示如果MultipartResolver类的bean存在，则该注解修饰的代码块不执行。
+	@ConditionalOnMissingBean(MultipartResolver.class)
 	public StandardServletMultipartResolver multipartResolver() {
 		StandardServletMultipartResolver multipartResolver = new StandardServletMultipartResolver();
 		multipartResolver.setResolveLazily(this.multipartProperties.isResolveLazily());

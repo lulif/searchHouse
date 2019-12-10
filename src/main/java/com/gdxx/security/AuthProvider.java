@@ -1,6 +1,8 @@
 package com.gdxx.security;
 
 
+import com.gdxx.entity.User;
+import com.gdxx.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -9,9 +11,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-
-import com.gdxx.entity.User;
-import com.gdxx.service.UserService;
 /*
  * 自定义认证实现
  */

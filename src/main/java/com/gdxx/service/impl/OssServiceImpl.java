@@ -18,8 +18,6 @@ public class OssServiceImpl implements OssService {
     @Value("${aliyun.oss.bucketName}")
     private String ossBucketName;
 
-    private static final String OBJECT_NAME = "house-picture";
-
     @Override
     public void uploadFile(InputStream inputStream,String objectName) throws OSSException, ClientException {
         try {

@@ -186,7 +186,7 @@ public class SearchServiceImpl implements SearchService {
             String esId = searchResponse.getHits().getAt(0).getId();
             success = update(esId, indexTemplate);
         } else {
-            // 多个数据=>deleteAndCreate(先删再查)
+            // 多个数据=>deleteAndCreate(先删再建)
             success = deleteAndCreate(totalHit, indexTemplate);
         }
 //TODO lbs
